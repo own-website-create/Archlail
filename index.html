@@ -1,0 +1,74 @@
+<html>
+<head>
+</head>
+<style>
+h1{
+border:3px groove White;
+border-radius:3em;
+color:Fuchsia;
+box-shadow:3px 5px 4px blue;
+text-shadow:3px 1px 2px red;
+}
+b{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.center-image img{
+    max-width:80%;
+    max-height:80vh;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(212,175,55,0.5);
+}
+.menu-btn{
+    position:absolute;
+    top:60px;
+    left:10px;
+    font-size:30px;
+    background:Pink;
+    border:none;
+    color:rgba(0,0,50,0.9);
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:60px;
+    left:10px;
+    background:rgba(0,0,50,0.9);
+    border:2px solid pink;
+    border-radius:10px;
+    padding:10px;
+}
+
+.menu a{
+    display:block;
+    color:Pink;
+    text-decoration:none;
+    padding:20px 30px;
+}
+
+.menu a:hover{
+    background:Pink;
+    color:black;
+}
+</style>
+<body background="Ancient Background.png">
+<h1 align="center">A world in the mind of a young girl</h1>
+<b class="center-image">
+<img src="Shot 0125.png" alt="Artwork">
+</b>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="menu" class="menu">
+    <a href="index.html">Home</a>
+    <a href="Characters.html">Characters</a>
+    <a href="Map.html">Map</a>
+    <a href="About.html">About</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
