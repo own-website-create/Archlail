@@ -4,7 +4,20 @@
 <style>
 body{
     margin:0;
+    overflow:hidden;
+    background:black;
 }
+
+.full-map{
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:fill;
+
+    cursor:pointer;
+}
+
 #lightbox{
 
     display:none;
@@ -22,7 +35,7 @@ body{
     justify-content:center;
     align-items:center;
 
-    z-index:10000;
+    z-index:10002;
 }
 
 #lightbox-img{
@@ -44,40 +57,17 @@ body{
 
     cursor:pointer;
 }
-.map-page{
-
-    width:100vw;
-    height:100vh;
-
-    background-image:url("Map Background.png");
-
-    background-size:100% 100%;
-
-    background-repeat:no-repeat;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-}
-
-.world-map{
-
-    width:70%;
-
-    max-height:75vh;
-
+.menu-btn{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:30px;
+    background:Pink;
+    border:none;
+    color:rgba(0,0,50,0.9);
     cursor:pointer;
-
-    transition:0.3s;
 }
 
-.world-map:hover{
-
-    transform:scale(1.02);
-
-}
 .menu{
     display:none;
     position:absolute;
@@ -102,14 +92,9 @@ body{
 }
 </style>
 <body>
-<div class="map-page">
-
-    <img src="Shot 0117.png"
-         class="world-map gallery-image"
-         alt="World Map">
-
-</div>
-
+<img src="Map Background.png"
+     class="full-map gallery-image"
+     alt="World Map">
 <div id="lightbox">
 
     <span id="close-btn">&times;</span>
