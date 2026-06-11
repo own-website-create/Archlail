@@ -1,0 +1,115 @@
+<html>
+<head>
+</head>
+<style>
+body{
+    margin:0;
+    background:black;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.about-card{
+    position:relative;
+
+    width:min(90vw,700px);
+}
+
+.scroll{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:fill;
+}
+.content{
+    position:absolute;
+
+    top:50%;
+    left:49%;
+
+    transform:translate(-50%,-50%);
+
+    width:70%;
+
+    text-align:center;
+
+    color:#442200;
+}
+
+.portrait{
+    width:25%;
+
+    max-width:120px;
+
+    border-radius:50%;
+
+    border:3px solid fuchsia;
+}
+
+h1{
+    font-size:clamp(1.3rem,3vw,2rem);
+}
+
+p,a{
+    font-size:clamp(0.8rem,2vw,1.2rem);
+}
+.menu-btn{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:30px;
+    background:Pink;
+    border:none;
+    color:rgba(0,0,50,0.9);
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(0,0,50,0.9);
+    border:2px solid pink;
+    border-radius:10px;
+    padding:10px;
+}
+
+.menu a{
+    display:block;
+    color:Pink;
+    text-decoration:none;
+    padding:20px 30px;
+}
+
+.menu a:hover{
+    background:Pink;
+    color:black;
+}
+</style>
+
+
+<div class="about-card">
+<img src="Scroll background.png" class="scroll">
+<div class="content">
+<img src="Shot 0126.jpg" class="portrait">
+<p> The Young girl: <a href="https://t.me/Mstellmeafuckingsecret">Archlail</a>
+</div></div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="menu" class="menu">
+    <a href="index.html">Home</a>
+    <a href="Characters.html">Characters</a>
+    <a href="Map.html">Map</a>
+    <a href="About.html">About</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

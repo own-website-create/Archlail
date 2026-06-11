@@ -1,0 +1,117 @@
+<html>
+<head>
+</head>
+<style>
+body{
+    background-color:rgba(0,0,50,0.9);
+    color:gold;
+}
+
+h1{
+    text-align:center;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+.card{
+    width:250px;
+    border:3px solid pink;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    box-shadow:0 0 20px fuchsia;
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border:2px solid pink;
+    border-radius:10px;
+}
+
+.card a{
+    transform:scale(1.05);
+    text-decoration:none;
+    color:pinks;
+}
+
+.card h2{
+    color:pink;
+    text-shadow:
+        0 0 5px fuchsia,
+        0 0 10px fuchsia,
+        0 0 20px fuchsia;
+}
+.menu-btn{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:30px;
+    background:Pink;
+    border:none;
+    color:rgba(0,0,50,0.9);
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(0,0,50,0.9);
+    border:2px solid pink;
+    border-radius:10px;
+    padding:10px;
+}
+
+.menu a{
+    display:block;
+    color:Pink;
+    text-decoration:none;
+    padding:20px 30px;
+}
+
+.menu a:hover{
+    background:Pink;
+    color:black;
+}
+</style>
+<h1>Characters</h1>
+
+<div class="gallery">
+
+    <div class="card">
+        <a href="Baren Corrigan.html">
+            <img src="Baren Corrigan.jpg">
+            <h2>Baren Corrigan</h2>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="God Of Life and Death.html">
+            <img src="God Of Life and Death.png">
+            <h2>God Of Life and Death</h2>
+        </a>
+    </div>
+</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="menu" class="menu">
+    <a href="index.html">Home</a>
+    <a href="Characters.html">Characters</a>
+    <a href="Map.html">Map</a>
+    <a href="About.html">About</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

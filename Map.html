@@ -1,0 +1,49 @@
+<html>
+<head>
+</head>
+<style>
+.menu-btn{
+    position:absolute;
+    top:10px;
+    left:10px;
+    font-size:30px;
+    background:Pink;
+    border:none;
+    color:rgba(0,0,50,0.9);
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(0,0,50,0.9);
+    border:2px solid pink;
+    border-radius:10px;
+    padding:10px;
+}
+
+.menu a{
+    display:block;
+    color:Pink;
+    text-decoration:none;
+    padding:20px 30px;
+}
+
+.menu a:hover{
+    background:Pink;
+    color:black;
+}
+</style>
+<body>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="menu" class="menu">
+    <a href="index.html">Home</a>
+    <a href="Characters.html">Characters</a>
+    <a href="Map.html">Map</a>
+    <a href="About.html">About</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
