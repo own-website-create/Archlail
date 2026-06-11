@@ -2,17 +2,82 @@
 <head>
 </head>
 <style>
-.menu-btn{
-    position:absolute;
-    top:10px;
-    left:10px;
-    font-size:30px;
-    background:Pink;
-    border:none;
-    color:rgba(0,0,50,0.9);
-    cursor:pointer;
+body{
+    margin:0;
+}
+#lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:rgba(0,0,0,0.95);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:10000;
 }
 
+#lightbox-img{
+
+    max-width:90%;
+    max-height:90%;
+}
+
+#close-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+}
+.map-page{
+
+    width:100vw;
+    height:100vh;
+
+    background-image:url("Map Background.png");
+
+    background-size:100% 100%;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.world-map{
+
+    width:70%;
+
+    max-height:75vh;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.world-map:hover{
+
+    transform:scale(1.02);
+
+}
 .menu{
     display:none;
     position:absolute;
@@ -37,6 +102,21 @@
 }
 </style>
 <body>
+<div class="map-page">
+
+    <img src="Shot 0117.png"
+         class="world-map gallery-image"
+         alt="World Map">
+
+</div>
+
+<div id="lightbox">
+
+    <span id="close-btn">&times;</span>
+
+    <img id="lightbox-img">
+
+</div>
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 <div id="menu" class="menu">
     <a href="index.html">Home</a>
