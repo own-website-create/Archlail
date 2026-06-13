@@ -45,6 +45,39 @@ h1{
 
 }
 
+#music-btn{
+
+    background:none;
+
+    color:#ffd6e7;
+
+    border:1px solid #ffd6e7;
+
+    border-radius:20px;
+
+    padding:12px 25px;
+
+    font-family:Garamond, serif;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+#music-btn:hover{
+
+    background:#ffd6e7;
+
+    color:#05081a;
+
+    box-shadow:
+    0 0 15px #ffd6e7;
+
+}
+
 p{
 
     font-size:26px;
@@ -126,6 +159,17 @@ hr{
 
 <h1>To Marina</h1>
 
+<button id="music-btn" onclick="toggleMusic()">
+
+✦ Play Music ✦
+
+</button>
+
+<audio id="bg-music" loop>
+
+    <source src="Some Type Of Skin - AURORA.mp3" type="audio/mpeg">
+
+</audio>
 <p>
 
 Every world begins with someone willing to imagine it.
@@ -166,6 +210,30 @@ You're the best, I love you.
 <p><Font color="Fuchsia">✦ Hidden Chamber discovered by its Creator ✦</font></p>
 </div>
 <script>
+
+function toggleMusic(){
+
+    let music = document.getElementById("bg-music");
+
+    let button = document.getElementById("music-btn");
+
+    if(music.paused){
+
+        music.play();
+
+        button.innerHTML = "✦ Pause Music ✦";
+
+    }
+
+    else{
+
+        music.pause();
+
+        button.innerHTML = "✦ Play Music ✦";
+
+    }
+
+}
 
 document.addEventListener("mousemove",function(e){
 
