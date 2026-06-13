@@ -1,0 +1,169 @@
+<html>
+
+<head>
+
+<title>Door to The Hidden Chamber</title>
+
+<style>
+
+body{
+
+    background:black;
+
+    color:white;
+
+    font-family:Garamond, serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    margin:0;
+
+}
+
+.secret-box{
+
+    text-align:center;
+
+}
+
+input{
+
+    background:black;
+
+    color:white;
+
+    border:2px solid Gold;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    font-size:20px;
+
+    text-align:center;
+
+}
+
+button{
+
+    background:black;
+
+    color:gold;
+
+    border:2px solid gold;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    margin-top:20px;
+
+}
+.Show{
+
+    background:black;
+
+    color:White;
+
+    border:2px solid gold;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    font-size:18px;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="secret-box">
+
+<h1><Font color="Gold">𓂀</Font></h1>
+
+<h2>The Hidden Chamber</h2>
+
+<p>
+
+Speak the sacred name.
+
+</p>
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button class="Show"
+        onclick="togglePassword()">
+👁
+</button>
+<br>
+
+<button onclick="checkPassword()">
+
+Enter
+
+</button>
+
+</div>
+
+<script>
+
+function togglePassword(){
+
+    let passwordBox =
+        document.getElementById("password");
+
+    if(passwordBox.type === "password"){
+
+        passwordBox.type = "text";
+
+    }
+
+    else{
+
+        passwordBox.type = "password";
+
+    }
+
+}
+
+function checkPassword(){
+
+    let pass =
+    document.getElementById("password").value;
+
+    if(pass==="Archlail"){
+
+        window.location.href =
+        "The Hidden Chamber.html";
+
+    }
+
+    else{
+
+        alert("THAT'S NOT THE SACRED NAME.");
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

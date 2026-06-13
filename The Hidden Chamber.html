@@ -1,0 +1,225 @@
+<html>
+</head>
+<title>The Hidden Chamber</title>
+<head>
+<style>
+body{
+
+    margin:0;
+
+    background:#05081a;
+
+    color:#ffd6e7;
+
+    font-family:Garamond, serif;
+
+    overflow-x:hidden;
+
+}
+
+.content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:80%;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding-top:120px;
+
+    padding-bottom:100px;
+
+}
+
+h1{
+
+    font-size:60px;
+
+    font-weight:normal;
+
+    margin-bottom:50px;
+
+}
+
+p{
+
+    font-size:26px;
+
+    line-height:1.8;
+
+}
+
+hr{
+
+    width:70%;
+
+    border:1px solid rgba(255,214,231,0.3);
+
+    margin-top:60px;
+
+    margin-bottom:60px;
+
+}
+
+.star{
+
+    position:fixed;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 4s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:0.2;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.moon{
+
+    position:fixed;
+
+    top:40px;
+
+    right:60px;
+
+    width:100px;
+
+    height:100px;
+
+    background:#fff8dc;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 30px white,
+    0 0 60px rgba(255,255,255,.5);
+
+    z-index:1;
+
+}
+</style>
+<body>
+<div class="moon"></div>
+
+<div id="stars"></div>
+
+<div class="content">
+
+<h1>To Marina</h1>
+
+<p>
+
+Every world begins with someone willing to imagine it.
+
+<br><br>
+
+Every story begins with someone willing to write it.
+
+<br><br>
+
+Every character begins with someone willing to dream.
+
+<br><br>
+
+I wanted to preserve the world you've built, because I think it's beautiful.
+
+<br><br>
+
+Keep drawing, Keep Dreaming
+
+<br><br>
+
+And never let the stories die.
+
+<br><br>
+
+And if one day you doubt yourself, remember that someone thought your world was beautiful enough to preserve.
+
+</p>
+
+<hr>
+
+<p>
+
+You're the best, I love you.
+
+</p>
+<p><Font color="Fuchsia">✦ Hidden Chamber discovered by its Creator ✦</font></p>
+</div>
+<script>
+
+document.addEventListener("mousemove",function(e){
+
+    let s=document.createElement("div");
+
+    s.innerHTML="✦";
+
+    s.style.position="fixed";
+
+    s.style.left=e.clientX+"px";
+
+    s.style.top=e.clientY+"px";
+
+    s.style.color="#ffd6e7";
+
+    s.style.pointerEvents="none";
+
+    s.style.fontSize="12px";
+
+    s.style.opacity="1";
+
+    document.body.appendChild(s);
+
+    setTimeout(function(){
+
+        s.remove();
+
+    },80);
+
+});
+
+
+for(let i=0;i<150;i++){
+
+    let star=document.createElement("div");
+
+    star.className="star";
+
+    let size=Math.random()*3+1;
+
+    star.style.width=size+"px";
+
+    star.style.height=size+"px";
+
+    star.style.left=Math.random()*100+"vw";
+
+    star.style.top=Math.random()*100+"vh";
+
+    star.style.animationDelay=Math.random()*4+"s";
+
+    document.body.appendChild(star);
+
+}
+
+</script>
+</body>
+</html>
