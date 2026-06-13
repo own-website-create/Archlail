@@ -3,7 +3,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://own-website-create.github.io/Archlail/</loc>
+    <loc>https://own-website-create.github.io/Archlail/</loc>
+</url>
+
+<url>
+    <loc>https://own-website-create.github.io/Archlail/Characters.html</loc>
+</url>
+
+<url>
+    <loc>https://own-website-create.github.io/Archlail/Map.html</loc>
+</url>
+
+<url>
+    <loc>https://own-website-create.github.io/Archlail/About.html</loc>
+</url>
+
+<url>
+    <loc>https://own-website-create.github.io/Archlail/Baren-Corrigan.html</loc>
+</url>
+
+<url>
+    <loc>https://own-website-create.github.io/Archlail/God-of-Life-and-Death.html</loc>
 </url>
 
 </urlset>

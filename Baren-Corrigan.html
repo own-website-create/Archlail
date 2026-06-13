@@ -1,0 +1,801 @@
+<html>
+<head>
+<title>Baren Corrigan</title>
+</head>
+<style>
+body{
+    background:black;
+    color:white;
+}
+html{
+
+    scroll-behavior:smooth;
+}
+.back-btn{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    background:black;
+
+    color:white;
+
+    border:2px solid white;
+
+    border-radius:20px;
+
+    padding:10px 20px;
+
+    font-size:20px;
+
+    font-family:Garamond, serif;
+	
+	text-decoration:none;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    z-index:1000;
+}
+
+.back-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.back-btn:visited{
+
+    color:white;
+
+}
+
+.back-btn:hover:visited{
+
+    color:black;
+
+}
+.top-section{
+
+    margin-top:80px;
+
+}
+.likes-box{
+
+    position:absolute;
+
+    top:70px;
+    left:9%;
+
+    width:25%;
+
+    color:white;
+
+    font-family:Garamond, serif;
+
+}
+
+.info-box{
+
+    position:absolute;
+
+    top:0px;
+    right:-200%;
+
+    width:50%;
+
+    color:white;
+
+    font-family:Garamond, serif;
+
+}
+
+.likes-box h2,
+.info-box h2{
+
+    text-align:center;
+
+    border-bottom:1px solid white;
+
+    padding-bottom:8px;
+
+}
+
+.likes-box ul,
+.info-box ul{
+
+    padding:0;
+
+    line-height:2;
+
+}
+
+.likes-box li,
+.info-box li{
+
+    margin-bottom:10px;
+
+}
+.baren-image{
+
+    display:block;
+
+    margin:auto;
+
+    width:20%;
+
+    max-width:900px;
+
+    border:2px solid pink;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+#lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:rgba(0,0,0,0.95);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:10000;
+}
+#lightbox-img{
+
+    max-width:90%;
+    max-height:90%;
+}
+
+#close-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+}
+h1{
+
+    text-align:center;
+
+    font-size:2.5em;
+
+    margin-bottom:40px;
+
+    color:white;
+
+    text-shadow:
+    0 0 10px white;
+}
+.subtitle{
+
+    text-align:center;
+
+    font-family:Garamond, serif;
+
+    font-size:18px;
+
+    color:#d8d8d8;
+
+    width:75%;
+
+    margin:auto;
+
+    line-height:1.6;
+
+    font-style:italic;
+
+    margin-bottom:50px;
+}
+
+.section-title{
+
+    font-family:Georgia, serif;
+
+    font-size:42px;
+
+    color:white;
+
+    text-align:left;
+
+    margin-left:10%;
+
+    margin-top:50px;
+
+    margin-bottom:10px;
+
+    border-bottom:1px solid white;
+
+    width:80%;
+
+    padding-bottom:8px;
+}
+
+.section-box{
+
+    width:80%;
+
+    margin:auto;
+
+    font-family:Garamond, serif;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    text-align:justify;
+
+    color:white;
+
+    padding-bottom:40px;
+}
+.timeline{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.era{
+
+    max-width:250px;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:Garamond, serif;
+
+}
+
+.era img{
+
+    width:90%;
+
+    border:2px solid white;
+
+    border-radius:10px;
+
+}
+
+.song{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+.metal{
+
+    color:#38d66b;
+}
+
+.orange{
+
+    color:#d8a23d;
+}
+
+.blue{
+
+    color:#7298ff;
+}
+
+.red{
+
+    color:#c44c4c;
+}
+.song a{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+.song a:hover{
+
+    text-decoration:underline;
+}
+
+.love-box{
+
+    width:90%;
+
+    margin:auto;
+
+    background:#2a1d1d;
+
+    border:2px solid #b88a8a;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+.love-title{
+
+    color:pink;
+
+    font-family:Georgia, serif;
+
+    font-size:40px;
+
+    margin-top:0;
+
+    margin-bottom:25px;
+
+}
+.love-box p{
+
+    width:100%;
+
+    font-family:Garamond, serif;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+.memory{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:50px;
+
+}
+
+.memory-text{
+
+    width:70%;
+
+}
+
+.memory-side{
+
+    width:25%;
+
+    text-align:center;
+
+}
+
+.memory-side img{
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+@media (max-width:768px){
+
+    .memory{
+
+        flex-direction:column;
+
+    }
+
+    .memory-text{
+
+        width:100%;
+
+    }
+
+    .memory-side{
+
+        width:70%;
+
+    }
+
+}
+
+.date{
+
+    color:#cccccc;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+    font-style:italic;
+
+}
+
+.memory img{
+
+    width:220px;
+
+    border:2px solid #d9b4b4;
+
+    border-radius:10px;
+
+}
+
+.caption{
+
+    margin-top:10px;
+
+    color:pink;
+
+}
+.songs-title{
+
+    font-family:Georgia, serif;
+
+    font-size:42px;
+
+    color:white;
+
+    text-align:left;
+
+    margin-left:10%;
+
+    margin-top:50px;
+
+    margin-bottom:10px;
+
+    border-bottom:1px solid white;
+
+    width:80%;
+
+    padding-bottom:8px;
+}
+.song-box{
+
+    width:80%;
+
+    margin:auto;
+
+    color:white;
+
+    font-family:Garamond, serif;
+
+    line-height:1.8;
+}
+
+.song-box h3{
+
+    font-size:30px;
+
+    margin-top:40px;
+}
+
+audio{
+
+    width:100%;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+}
+
+hr{
+
+    border:1px solid gray;
+
+    margin-top:50px;
+}
+.ending-line{
+
+    width:90%;
+
+    margin-top:100px;
+
+    margin-bottom:50px;
+
+    border:1px solid white;
+
+}
+
+.final-title{
+
+    text-align:center;
+
+    color:white;
+
+    font-family:Georgia, serif;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+.final-image{
+
+    display:block;
+
+    width:85%;
+
+    margin:auto;
+
+    border:2px solid Pink;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    margin-bottom:100px;
+
+}
+
+.final-image:hover{
+
+    box-shadow:0 0 20px Fuchsia;
+
+}
+</style>
+<body>
+<a href="Characters.html" class="back-btn">
+← Back
+</a>
+<div class="top-section">
+
+<div class="likes-box">
+
+<h2>✦About Baren's far things we can mention:</h2>
+
+<ol>
+
+<li>Pasta (especially mom's homemade)</li>
+
+<li>Car courses (midnight drags>>)</li>
+
+<li>Accessories</li>
+
+<li>Hugging from behind</li>
+
+<li>Everything that makes a person ecstatic; from alcohols and rock concerts to XXX.</li>
+
+</ol>
+<div class="info-box">
+
+<h2>✦More information:</h2>
+
+<ul type="disk">
+
+<li>ENXP-T</li>
+
+<li>Gryffindor (as a "HP" house)</li>
+
+<li>Dog Person</li>
+
+<li>186cm</li>
+
+</ul>
+
+</div>
+</div>
+<img src="Baren Corrigan.jpg"
+     class="baren-image gallery-image"
+     alt="Baren Corrigan">
+<h1>Baren Corrigan</h1>
+</div>
+<div class="subtitle">Baren Anderson Corrigan; one of the most loved ones by it's creator; son of Samanta Anderson and the famous actor, Conan Corrigan
+</div>
+<p class="section-title">Overview</p>	
+<div class="section-box">He was born in San Francisco and raised in New York City. He is the first child and has a 7-years younger sister, named Taniya. when Baren was 13 years old, his parents got divorced and the children grew up with their mother in NYC. Baren was 19, nearly 20, when he moved to San Francisco to live with his father; even though he had never tasted father love. Young man chose computer science for university but hadn't continued it any longer than two semesters; allthough, everyone considered him as a problem-solving genius. After 21st year of his life, drugs took over his life and he experienced a tragic love failure. Now, this is Baren as you see: tire, hopefull and in love, at his 24.
+</div>
+<div class="timeline">
+
+    <div class="era">
+
+        <p class="song metal"><a href="#wearethepeople"><u>"We Are The People" - EOTS</u></a></p>
+
+        <img src="Baren Corrigan 1.jpg" class="baren-image gallery-image">
+
+        <p>16.5 YO</p>
+
+        <p>He used to listen to metal.</p>
+
+        <p>🤝Ginger was his best friend.</p>
+
+    </div>
+
+    <div class="era">
+
+        <p class="song orange"><a href="#pornstar"><u>"PORNSTAR" - Nessa Barrett</u></a></p>
+
+        <img src="Baren Corrigan 2.jpg" class="baren-image gallery-image">
+
+        <p>21 YO</p>
+
+        <p>He had just met <u>Margorret</u>.</p>
+
+        <p>Margo and him were bc!</p>
+
+    </div>
+
+    <div class="era">
+
+        <p class="song blue"> <a href="#wildflower"><u>"WILDFLOWER" - Billie Eilish</u></a></p>
+
+        <img src="Baren Corrigan 3.jpg" class="baren-image gallery-image">
+
+        <p>24 YO</p>
+
+        <p>He had just came here;</p>
+
+        <p>When he confessed his love❤️.</p>
+
+    </div>
+
+    <div class="era">
+
+        <p class="song red"><a href="#waste"><u>"WASTE" - Kxllswxtch</u></a></p>
+
+        <img src="Baren Corrigan 4.jpg" class="baren-image gallery-image">
+
+        <p>24.5 YO</p>
+
+        <p>He had just come here for</p>
+
+        <p>the second time with a df💔.</p>
+
+    </div>
+
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="love-box">
+
+<div class="love-content">
+
+<h2 class="love-title">Baren's Love Stories:</h2>
+<div class="memory">
+
+    <div class="memory-text">
+
+<p>He fell in love with Margorret when he saw her dancing at a crowded club;
+Baren felt he'd finally found his soulmate; until he caught her and
+her social friend named Louis. What a waste; Baren wanted to marry Margo;
+he even bought her a ring, it never came out of box tho.
+  </p></div>
+  
+    <div class="memory-side">
+        <div class="date">2021. Sep 11</div>
+
+        <img src="Baren Corrigan Love 1.jpg"
+             class="gallery-image">
+
+    </div>
+	</div>
+<div class="memory">
+
+    <div class="memory-text">
+<p>After moving on, he returned to NY and tried to forget Margorret,
+who was nothing more than a b****.
+Baren just arrived on Ginger's birthday on Oct 17th.
+Baren told him that he loves him infinitely, but who would believe this joke?
+but as time passed, the one-sided love proved more;
+but why so unplanned - and ridiculous?
+
+</p>
+</div>
+
+    <div class="memory-side">
+
+        <div class="date">2024. Apr 1</div>
+
+        <img src="Baren Corrigan Love 2.jpg"
+             class="gallery-image">
+
+    </div>
+
+</div>
+</div></div>
+<br><br><br><br><br>
+<p class="songs-title">Songs he gave their vibe</p>	
+<div class="song-box">
+
+<h3 id="wearethepeople">
+We Are The People — Empire Of The Sun
+</h3>
+
+<audio controls>
+
+<source src="We Are The People - Empire Of The Sun.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<hr>
+
+<h3 id="pornstar">
+Pornstar — Nessa Barrett
+</h3>
+
+<audio controls>
+
+<source src="PORNSTAR - Nessa Barrett.m4a"
+type="audio/mpeg">
+
+</audio>
+
+<hr>
+
+<h3 id="wildflower">
+Wildflower — Billie Eilish
+</h3>
+
+<audio controls>
+
+<source src="WILDFLOWER - Billie Eilish.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<hr>
+
+<h3 id="waste">
+Waste — Kxllswxtch
+</h3>
+
+<audio controls>
+
+<source src="WASTE - Kxllswxtch.mp3"
+type="audio/mpeg">
+
+</audio>
+
+</div>
+<hr class="ending-line">
+
+<h2 class="final-title">
+✦ Complete Character Sheet ✦
+</h2>
+
+<img src="Baren Corrigan Story.jpg"
+     class="final-image gallery-image"
+     alt="Baren Anderson Corrigan Character Sheet">
+<div id="lightbox">
+
+    <span id="close-btn">&times;</span>
+
+    <img id="lightbox-img">
+	
+</div>
+<script src="script.js"></script>
+</body>
+</html>
