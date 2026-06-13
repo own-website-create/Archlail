@@ -371,19 +371,61 @@ h1{
 
 }
 
-.love-pictures{
+.memory{
 
     display:flex;
 
-    flex-direction:column;
+    justify-content:space-between;
+
+    align-items:center;
 
     gap:30px;
 
+    margin-bottom:50px;
+
 }
 
-.memory{
+.memory-text{
+
+    width:70%;
+
+}
+
+.memory-side{
+
+    width:25%;
 
     text-align:center;
+
+}
+
+.memory-side img{
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+@media (max-width:768px){
+
+    .memory{
+
+        flex-direction:column;
+
+    }
+
+    .memory-text{
+
+        width:100%;
+
+    }
+
+    .memory-side{
+
+        width:70%;
+
+    }
 
 }
 
@@ -590,17 +632,28 @@ hr{
 <div class="love-content">
 
 <h2 class="love-title">Baren's Love Stories:</h2>
+<div class="memory">
 
-<p>
+    <div class="memory-text">
 
-He fell in love with Margorret when he saw her dancing at a crowded club;
+<p>He fell in love with Margorret when he saw her dancing at a crowded club;
 Baren felt he'd finally found his soulmate; until he caught her and
 her social friend named Louis. What a waste; Baren wanted to marry Margo;
 he even bought her a ring, it never came out of box tho.
+  </p></div>
+  
+    <div class="memory-side">
+        <div class="date">2021. Sep 11</div>
 
-<br><br><br>
+        <img src="Baren Corrigan Love 1.jpg"
+             class="gallery-image">
 
-After moving on, he returned to NY and tried to forget Margorret,
+    </div>
+	</div>
+<div class="memory">
+
+    <div class="memory-text">
+<p>After moving on, he returned to NY and tried to forget Margorret,
 who was nothing more than a b****.
 Baren just arrived on Ginger's birthday on Oct 17th.
 Baren told him that he loves him infinitely, but who would believe this joke?
@@ -609,17 +662,9 @@ but why so unplanned - and ridiculous?
 
 </p>
 </div>
-<div class="love-pictures">
 
-    <div class="memory">
-        <div class="date">2021. Sep 11</div>
+    <div class="memory-side">
 
-        <img src="Baren Corrigan Love 1.jpg"
-             class="gallery-image">
-
-    </div>
-
-    <div class="memory">
         <div class="date">2024. Apr 1</div>
 
         <img src="Baren Corrigan Love 2.jpg"
@@ -628,8 +673,7 @@ but why so unplanned - and ridiculous?
     </div>
 
 </div>
-
-</div>
+</div></div>
 <br><br><br><br><br>
 <p class="songs-title">Songs he gave their vibe</p>	
 <div class="song-box">
